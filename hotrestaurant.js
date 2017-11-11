@@ -12,6 +12,7 @@ var path = require(path);
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+<<<<<<< HEAD
 app.get('/', function (req, res){
 <<<<<<< HEAD
 	res.send("")
@@ -20,25 +21,18 @@ app.get('/', function (req, res){
 >>>>>>> 5dce8641652675a5921b2098878d3b4f36a5e5a4
 })
 
+=======
+>>>>>>> f22f517c055f752521fe82da1968c10d4d5e68bc
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
-app.use(function (req, res){
-	res.setHeader('Content-Type', 'text/plain')
-	res.write('you posted:\n')
-	res.end(JSON.stringify(req.body, null, 2))
-})
+
+require('./html-routes.js')(app);
 
 app.listen(PORT, function(){
 	console.log("Listening on PORT: " + PORT);
 });
 // Create a few array variables that will hold the data
-var table = [
-{
-	routeName:
-	routeEmail:
-	routeID:
-	routeNumber:
-}];
+
 // Create a set of routes for getting and posting table data
 
 // Create a set of routes for displaying the HTML pages
