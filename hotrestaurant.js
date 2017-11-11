@@ -3,13 +3,13 @@
 // Create a basic server using Express.JS
 var express = require("express");
 var bodyParser = require("body-parser");
-var app = express();
+var path = require(path);
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.get('/', function (req, res){
-	res.send("")
+	res.send("Welcome to the Hottest Restaurant!")
 })
 
 app.use(bodyParser.urlencoded({ extended: false}));
